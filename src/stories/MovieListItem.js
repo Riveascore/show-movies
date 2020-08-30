@@ -23,14 +23,23 @@ const useStyles = makeStyles({
 export const MovieListItem = ({ title, uri, overview, ...props }) => {
   const classes = useStyles();
 
-  return (
-    <Card className={classes.root}>
-      <CardActionArea>
+  const renderImage = () => {
+    if (uri && uri != "") {
+      return (
         <CardMedia
           className={classes.media}
           image={uri}
           title={title}
         />
+      );
+    } 
+    return (null);
+  }
+
+  return (
+    <Card className={classes.root}>
+      <CardActionArea>
+          {renderImage()}
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {title}
