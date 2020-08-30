@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Header } from './Header';
+import { MyHeader } from './MyHeader';
 
 export default {
-  title: 'Example/Header',
-  component: Header,
+  title: 'Example/MyHeader',
+  component: MyHeader,
 };
 
-const Template = (args) => <Header {...args} />;
+const Template = (args) => <MyHeader {...args} />;
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {
