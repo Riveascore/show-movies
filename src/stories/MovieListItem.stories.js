@@ -1,15 +1,17 @@
 import React from 'react';
 
-import { MyHeader } from './MyHeader';
+import { MovieListItem } from './MovieListItem';
 
 export default {
-  title: 'Example/MyHeader',
-  component: MyHeader,
+  title: 'Example/MovieListItem',
+  component: MovieListItem,
 };
 
-const Template = (args) => <MyHeader {...args} />;
+const Template = (args) => <MovieListItem {...args} />;
 
-export const Basic = Template.bind({});
-Basic.args = {
-  title: "Top Rated Movies"
+export const SingleMovie = Template.bind({});
+SingleMovie.args = {
+  title: "Title",
+  uri: 'https://i.pinimg.com/originals/d7/87/da/d787da8630ce5dfcd2d7f375b03efc55.png',
+  overview: "Overview"
 };

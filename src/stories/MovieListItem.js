@@ -8,7 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import PropTypes from 'prop-types';
-import './my_header.css';
+import './movie_list_item.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,24 +22,29 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const MyHeader = ({ title, ...props }) => {
+export const MovieListItem = ({ title, uri, overview, ...props }) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            {title}
-          </Typography>
-        </Toolbar>
-      </AppBar>
+    <div>
+      <h1
+        className="storybook-movie-list-item"
+      >
+        {title}
+      </h1>
+      <img
+        src={uri}
+        alt={title}
+      />
+      <p>
+        {overview}
+      </p>
     </div>
   );
 }
 
-MyHeader.propTypes = {
+MovieListItem.propTypes = {
 };
 
-MyHeader.defaultProps = {
+MovieListItem.defaultProps = {
 };

@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import { Basic } from './stories/MyHeader.stories';
+import { SingleMovie } from './stories/MovieListItem.stories';
 
 function App() {
   return (
