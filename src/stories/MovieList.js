@@ -10,7 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import PropTypes from 'prop-types';
 import './movie_list.css';
 
-import { SingleMovie } from './stories/MovieListItem.stories';
+import { SingleMovie } from './MovieListItem.stories';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,23 +24,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const MovieList = ({ title, uri, overview, ...props }) => {
+export const MovieList = ({ movies, ...props }) => {
   const classes = useStyles();
 
   return (
     <div>
-      <h1
-        className="storybook-movie-list-item"
-      >
-        {title}
-      </h1>
-      <img
-        src={uri}
-        alt={title}
-      />
-      <p>
-        {overview}
-      </p>
+      {movies.map(movie => <SingleMovie key={movie.title} {...movie} />)}
     </div>
   );
 }
