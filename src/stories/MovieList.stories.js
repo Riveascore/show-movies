@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { MovieListItem } from './MovieListItem';
+import { MovieList } from './MovieList';
 
 export default {
-  title: 'Example/MovieListItem',
-  component: MovieListItem,
+  title: 'Example/MovieList',
+  component: MovieList,
 };
 
-const Template = (args) => <MovieListItem {...args} />;
+const Template = (args) => <MovieList {...args} />;
 
-export const SingleMovie = Template.bind({});
-SingleMovie.args = {
+export const AllMovies = Template.bind({});
+AllMovies.args = {
   title: "Title",
   uri: 'https://i.pinimg.com/originals/d7/87/da/d787da8630ce5dfcd2d7f375b03efc55.png',
   overview: "Overview"

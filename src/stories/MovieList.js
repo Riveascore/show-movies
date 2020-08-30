@@ -8,7 +8,9 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import PropTypes from 'prop-types';
-import './movie_list_item.css';
+import './movie_list.css';
+
+import { SingleMovie } from './stories/MovieListItem.stories';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const MovieListItem = ({ title, uri, overview, ...props }) => {
+export const MovieList = ({ title, uri, overview, ...props }) => {
   const classes = useStyles();
 
   return (
@@ -43,8 +45,8 @@ export const MovieListItem = ({ title, uri, overview, ...props }) => {
   );
 }
 
-MovieListItem.propTypes = {
+MovieList.propTypes = {
 };
 
-MovieListItem.defaultProps = {
+MovieList.defaultProps = {
 };
