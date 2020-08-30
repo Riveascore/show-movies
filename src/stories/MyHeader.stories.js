@@ -11,5 +11,5 @@ const Template = (args) => <MyHeader {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {
-  user: {},
+  title: "Movies"
 };
