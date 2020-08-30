@@ -1,45 +1,51 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import Typography from '@material-ui/core/Typography';
 
 import PropTypes from 'prop-types';
 import './movie_list_item.css';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   root: {
-    flexGrow: 1,
+    maxWidth: 345,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
+  media: {
+    height: 140,
   },
-  title: {
-    flexGrow: 1,
-  },
-}));
+});
 
 export const MovieListItem = ({ title, uri, overview, ...props }) => {
   const classes = useStyles();
 
   return (
-    <div>
-      <h1
-        className="storybook-movie-list-item"
-      >
-        {title}
-      </h1>
-      <img
-        src={uri}
-        alt={title}
-      />
-      <p>
-        {overview}
-      </p>
-    </div>
+    <Card className={classes.root}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image={uri}
+          title={title}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {title}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {overview}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button size="small" color="primary">
+          Learn More
+        </Button>
+      </CardActions>
+    </Card>
   );
 }
 
