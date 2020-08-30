@@ -20,11 +20,11 @@ const useStyles = makeStyles({
   },
 });
 
-export const MovieListItem = ({ title, uri, overview, ...props }) => {
+const MovieListItem = ({ title, uri, overview, ...props }) => {
   const classes = useStyles();
 
   const renderImage = () => {
-    if (uri && uri != "") {
+    if (uri && uri !== "") {
       return (
         <CardMedia
           className={classes.media}
@@ -63,3 +63,5 @@ MovieListItem.propTypes = {
 
 MovieListItem.defaultProps = {
 };
+
+export default MovieListItem;

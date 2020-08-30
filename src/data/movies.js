@@ -10,7 +10,7 @@ const movies = [
   },
   {
     title: "Sin City",
-    uri: "https://i.insider.com/5c82cd65eb3ce8343e5986e2?width=1300&format=jpeg&auto=webp",
+    // uri: "https://i.insider.com/5c82cd65eb3ce8343e5986e2?width=1300&format=jpeg&auto=webp",
     overview: `
       Frank Miller and Robert Rodriguez's "Sin City" is an action-packed thriller with Jessica Alba, Rosario Dawson, Mickey Rourke, and Bruce Willis as its leads. Adapted from Frank Miller's comic books, the movie is filled with corruption, romance, and redemption. 
     `
@@ -24,7 +24,7 @@ const movies = [
   },
   {
     title: "Pirates of the Caribbean: The Curse of the Black Pearl",
-    uri: "https://i.insider.com/5a1319667101ad2a4e719beb?width=1300&format=jpeg&auto=webp",
+    // uri: "https://i.insider.com/5a1319667101ad2a4e719beb?width=1300&format=jpeg&auto=webp",
     overview: `
       A film that resulted in an entire franchise, "Pirates of the Caribbean: The Curse of the Black Pearl" features pirates, ancient curses, and an army of the undead. Johnny Depp, Orlando Bloom, and Keira Knightley play the leads of the adventure film and they later regrouped for several sequels. 
     `
